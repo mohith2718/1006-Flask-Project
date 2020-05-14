@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--specifies title of the page !-->
+        <title>Home</title>
+    <head>
+    <body>
+    
+    <p>This was one of my favorite classes at Columbia so far. It was very challenging for me initially, 
+        but I enjoyed this first dive into python and haven't just began to appreciate all the cool stuff
+        you can do with it. I really appreciated the opportunity to try out different applications of python
+        in each of the homework assignments and was inspired to try something of my own using openCV. I've 
+        always thought computer vision was cool and I really enjoyed the pixel processing homework, so I'm 
+        making AR doodle jump as my first project.
+    </p>
+
+    <p>When I'm done, the game will allow the user to place blue objects in the frame of my computer webcam
+        and a ball which I've programmed to move as if under the influence of gravity will bounce on top of 
+        detected blue objects. The intention is that players can point a camera at a wall and place a bunch
+        of peices of blue tape on the wall. Using the arrow keys on the keyboard, the player can jump the ball 
+        from tape to tape. Kinda hard to explain and easier to show, so below is screenshot of my current progress!
+    </p>
+    <img src="blue_track.png" width = '800'>
+
+    <p>What you see here is the game so far. In each frame of the live webcam feed, the ball falls to the "ground" 
+        (programmed its motion to augment gravity) and when there are blue pixels (a range of blue pixels) under the ball's
+        current position, a jump function is called and the ball jumps. If the ball falls to the "ground" marked as a blue line
+        at the bottom, it slowly loses kinetic energy with each bounce and eventually stops bouncing. Right now, when the ball
+        remains in a static position on the ground, its y_position function goes to infinity becuase of the way in which I programmed
+        in gravity for the time being. Therefore, in order have the program not crash, there is a list constantly being updated with
+        the 20 most recent frames. If the first and last items of that list show that the ball is on the ground, the video capture breaks
+        and the game gracefully terminates. This is actually perfect because the intention is that if the ball falls to the ground, the player
+        has lost.
+    </p>
+
+    <p>The above progress alone has taken several days already. The hardest part to write so far was the color contouring for the program
+        to detect blue objects. This requires converting frames from BGR color format to hsv, applying a blue mask, and detecting the edges of
+        where blue pixels are identified. The resultant contour is then displayed on the video feed along with the other game elements. Excited to
+        see where this goes
+    </p>
+
+    </body>
+</html>
+
