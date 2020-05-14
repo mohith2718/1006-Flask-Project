@@ -16,11 +16,11 @@ app = Flask(__name__)
 def main_page():
     return render_template("index.html")
 
-@app.route("/assignments") #assignments page
-def assign():
+@app.route("/openCV") #openCV page
+def opencv():
     return "yo"
 
-@app.route("/classes") #assignments page
+@app.route("/classes") #classespage
 def classes():
     return "sup"
 
