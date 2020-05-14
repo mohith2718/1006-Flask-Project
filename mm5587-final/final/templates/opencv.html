@@ -5,7 +5,9 @@
         <title>Home</title>
     <head>
     <body>
-    
+
+    <p>openCV Doodle Jump: in progress</p>
+
     <p>This was one of my favorite classes at Columbia so far. It was very challenging for me initially, 
         but I enjoyed this first dive into python and haven't just began to appreciate all the cool stuff
         you can do with it. I really appreciated the opportunity to try out different applications of python
@@ -20,7 +22,7 @@
         of peices of blue tape on the wall. Using the arrow keys on the keyboard, the player can jump the ball 
         from tape to tape. Kinda hard to explain and easier to show, so below is screenshot of my current progress!
     </p>
-    <img src="blue_track.png" width = '800'>
+    <img src="{{ url_for('static', filename = 'blue_track.png') }}" width = '800'>
 
     <p>What you see here is the game so far. In each frame of the live webcam feed, the ball falls to the "ground" 
         (programmed its motion to augment gravity) and when there are blue pixels (a range of blue pixels) under the ball's
