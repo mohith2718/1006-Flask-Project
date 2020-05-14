@@ -18,11 +18,11 @@ def main_page():
 
 @app.route("/openCV") #openCV page
 def opencv():
-    return "yo"
+    return render_template("opencv.html")
 
 @app.route("/classes") #classespage
 def classes():
-    return "sup"
+    return render_template("classes.html")
 
 #start the server
 if __name__ == "__main__":
